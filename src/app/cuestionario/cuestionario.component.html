@@ -1,0 +1,62 @@
+<h1 style="color:rgb(104, 0, 104)">Selecciona tu tipo de juego</h1>
+<br/>
+<form [formGroup]="userForm">
+    <p><input type="text" id="tipo" name="tipo" formControlName="tipo">
+    </p>
+    
+    <p><input type="text" id="tema" name="tema" formControlName="tema">
+    </p>
+    <div>
+        <label for="tipojuego">   Eurogame</label>
+        <input type="radio" name="tipojuego" id="tipojuego"  value="abstracto" class="form -control">
+    
+        <label for="tipojuego">   Ameritrash</label>
+        <input type="radio"  name="tipojuego" id="tipojuego"  value="abstracto" class="form -control">
+    
+        <label for="tipojuego">   Filler</label>
+        <input type="radio" name="tipojuego" id="tipojuego"  value="abstracto" class="form -control">
+  
+        <label for="tipojuego">   Abstracto</label>
+        <input type="radio" name="tipojuego" id="tipojuego"  value="abstracto" class="form -control">
+    
+        <label for="tipojuego">   Party</label>
+        <input type="radio" name="tipojuego" id="tipojuego"  value="abstracto" class="form -control">
+    
+    
+        <label for="tipojuego">  Rol/narrativo</label>
+        <input type="radio" multiple name="tipojuego" id="tipojuego"  class="form -control">
+    </div>
+    <div>
+   
+        <button type="button" multiple name="tipojuego"(click)=" listarPorJuego()">Enviar </button>
+        <button type="button" multiple name="filtrojuego"(click)=" listarPorFiltro()">Filtro </button>
+    </div>
+    <table id="customers">
+        <tr>
+        <th>Id Juego</th>
+        <th>nombre</th>
+        <th>autor</th>
+        <th>editorial</th>
+        <th>tipo de juego</th>
+        <th>mecánica</th>
+        <th>temática</th>
+        <th>duración</th>
+        <th>cooperativo</th>
+        <th>numero de jugadores</th>
+        <th>dureza</th>
+        </tr>
+        <tr *ngFor="let elemento of juegosFiltro">
+        <td>{{elemento.idJuego}}</td>
+        <td>{{elemento.nomJuego}}</td>
+        <td>{{elemento.autor}}</td>
+        <td>{{elemento.editorial}}</td>
+        <td>{{elemento.tipojuego}}</td>
+        <td>{{elemento.mecanica}}</td>
+        <td>{{elemento.tematica}}</td>
+        <td>{{elemento.duracion}}</td>
+        <td>{{elemento.cooperativo}}</td>
+        <td>{{elemento.numJugadores}}</td>
+        <td>{{elemento.dureza}}</td>
+        
+        </tr>
+    </table>

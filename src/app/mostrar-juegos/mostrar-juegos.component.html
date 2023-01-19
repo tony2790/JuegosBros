@@ -1,0 +1,33 @@
+<h1>Listado completo de juegos de mesa</h1>
+
+<table id="customers">
+<tr>
+<th>Id Juego</th>
+<th>nombre</th>
+<th>autor</th>
+<th>editorial</th>
+<th>tipo de juego</th>
+<th>mecánica</th>
+<th>temática</th>
+<th>duración</th>
+<th>cooperativo</th>
+<th>numero de jugadores</th>
+<th>dureza</th>
+</tr>
+<tr *ngFor="let elemento of juegoss">
+<td>{{elemento.idJuego}}</td>
+<td>{{elemento.nomJuego}}</td>
+<td>{{elemento.autor}}</td>
+<td>{{elemento.editorial}}</td>
+<td>{{elemento.tipojuego}}</td>
+<td>{{elemento.mecanica}}</td>
+<td>{{elemento.tematica}}</td>
+<td>{{elemento.duracion}}</td>
+<td>{{elemento.cooperativo}}</td>
+<td>{{elemento.numJugadores}}</td>
+<td>{{elemento.dureza}}</td>
+
+</tr>
+</table>
+
+
